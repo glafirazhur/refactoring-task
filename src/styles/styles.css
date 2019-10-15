@@ -1,0 +1,22 @@
+.header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.calc-form {
+  max-width: 300px;
+}
+
+.form-fieldset {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.calc-button {
+  padding: 5px 10px;
+}

@@ -1,25 +1,43 @@
-<html>
-<head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Price calculator</title>
-</head>
-<body>
-    <h3>Please check the console for output.</h3>
-    <script src="src/price-calculator.js"></script>
-    <script>
-        var calculatedPrice = 0;
-        var userType = 1;
-        var productType = 0;
-        var price = 100;
-        var publishedDate = new Date();
+    <link rel="stylesheet" href="src/styles/styles.css">
+  </head>
+  <body>
+    <div class="header">Please check the console for output</div>
+    <form class="calc-form">
+      <label class="form-label">Price
+        <input type="text" class="price" value="0">
+      </label>
+      <fieldset class="form-fieldset">
+        <legend>User Type</legend>
+        <label for="normal-user" class="form-label">
+          <input type="radio" name="user-type" id="normal-user" value="0">Normal
+        </label>
+        <label for="company-user" class="form-label">
+          <input type="radio" name="user-type" id="company-user" value="1">Company
+        </label>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend>Product Type</legend>
+        <label for="new-product" class="form-label">
+          <input type="radio" name="product-type" id="new-product" value="0">New
+        </label>
+        <label for="normal-user" class="form-label">
+          <input type="radio" name="product-type" id="old-product" value="1">Old
+        </label>
+        <label for="product-date" class="form-label">Published date
+          <input type="date" class="product-date" id="product-date" value="">
+        </label>
+      </fieldset>
+      <button type="button" class="calc-button">Calculate</button>
+    </form>
 
-        try {
-            calculatedPrice = calculatePrice(userType, productType, price, publishedDate);
-        } catch (ex) {
-            console.log(ex);
-        }
-
-        console.log('Calculated price:', calculatedPrice);
-    </script>
-</body>
+    <script src="src/js/price-calculator.js"></script>
+  </body>
 </html>
